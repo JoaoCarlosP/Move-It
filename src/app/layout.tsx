@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import { Inter, Rajdhani } from 'next/font/google'
+import { ChallengesProvider } from "@/hooks/ChallengesContext";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en' className={`${inter.variable} ${rajdhani.variable}`} id='html'>
       <body className={inter.className}>
-        {children}
+        <ChallengesProvider>
+          {children}
+        </ChallengesProvider>
       </body>
     </html>
   )

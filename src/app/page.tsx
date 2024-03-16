@@ -5,6 +5,7 @@ import CompletedChallenges from "@/components/CompletedChallenges/CompletedChall
 import Countdown from "@/components/Countdown/Countdown";
 import Head from "next/head";
 import { Metadata } from "next";
+import ChallengeBox from "@/components/ChallengeBox/ChallengeBox";
 
 export const metadata: Metadata = {
   title: 'Início | move.it',
@@ -23,7 +24,9 @@ export default function Home() {
           <Countdown />
         </div>
 
-        <div></div>
+        <div>
+          <ChallengeBox />
+        </div>
       </section>
     </div>
   )
