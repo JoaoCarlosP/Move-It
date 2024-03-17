@@ -33,7 +33,7 @@ export function CountdownProvider ({ children }: { children: ReactNode }) {
   function resetCountdown () {
     setIsActive(false)
     clearTimeout(countdownTimeout)
-    setTime(25 * 60)
+    setTime(0.05 * 60)
     setHasFinished(false)
   }
 
