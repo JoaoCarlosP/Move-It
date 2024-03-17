@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { Inter, Rajdhani } from 'next/font/google'
 import { ChallengesProvider } from "@/hooks/ChallengesContext";
+import { CountdownProvider } from '@/hooks/CountdownContext';
 
 const inter = Inter({
   subsets: ['latin'],

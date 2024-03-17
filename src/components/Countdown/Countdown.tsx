@@ -3,43 +3,21 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Countdown.module.css'
 import useChallenges from '@/hooks/ChallengesContext'
+import useCountdown from '@/hooks/CountdownContext'
 
-let countdownTimeout: NodeJS.Timeout
 
 function Countdown() {
-  const { startNewChallenge } = useChallenges()
-
-  const [time, setTime] = useState(0.05 * 60)
-  const [isActive, setIsActive] = useState(false)
-  const [hasFinished, setHasFinished] = useState(false)
-
-  const minutes = Math.floor(time / 60)
-  const seconds = time % 60
+    const {
+      minutes,
+      seconds,
+      isActive,
+      hasFinished,
+      startCountdown,
+      resetCountdown
+    } = useCountdown()
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
-  const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
-
-  function startCountdown () {
-    setIsActive(true)
-  }
-
-  function resetCountdown () {
-    setIsActive(false)
-    clearTimeout(countdownTimeout)
-    setTime(25 * 60)
-  }
-
-  useEffect(() => {
-    if (isActive && time > 0) {
-      countdownTimeout = setTimeout(() => {
-        setTime(prev => prev - 1)
-      }, 1000)
-    } else if (isActive && time === 0) {
-      setHasFinished(true)
-      setIsActive(false)
-      startNewChallenge()
-    }
-  }, [isActive, time, startNewChallenge])
+  const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')  
 
   return (
     <div>

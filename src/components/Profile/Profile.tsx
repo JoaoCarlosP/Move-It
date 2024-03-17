@@ -1,8 +1,13 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import styles from './Profile.module.css'
+import useChallenges from '@/hooks/ChallengesContext'
 
 function Profile() {
+  const { level } = useChallenges()
+  
   return (
     <div className={styles.profileContainer}>
       <Image
@@ -21,7 +26,7 @@ function Profile() {
             height={16}
             width={16}
           />
-          Level 1
+          Level {level}
         </p>
       </div>
     </div>

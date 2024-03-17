@@ -6,6 +6,7 @@ import Countdown from "@/components/Countdown/Countdown";
 import Head from "next/head";
 import { Metadata } from "next";
 import ChallengeBox from "@/components/ChallengeBox/ChallengeBox";
+import { CountdownProvider } from "@/hooks/CountdownContext";
 
 export const metadata: Metadata = {
   title: 'Início | move.it',
@@ -17,17 +18,19 @@ export default function Home() {
     <div className={styles.container}>
       <ExperienceBar />
 
-      <section>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </div>
+      <CountdownProvider>
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
 
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
+          <div>
+            <ChallengeBox />
+          </div>
+        </section>
+      </CountdownProvider>
     </div>
   )
 }

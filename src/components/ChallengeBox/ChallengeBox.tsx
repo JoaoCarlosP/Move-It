@@ -5,9 +5,11 @@ import React, { useContext, useMemo } from 'react'
 import styles from './ChallengeBox.module.css'
 import Image from 'next/image'
 import useChallenges from '@/hooks/ChallengesContext'
+import useCountdown from '@/hooks/CountdownContext'
 
 function ChallengeBox() {
-  const { activeChallenge, resetChallenge } = useChallenges()
+  const { activeChallenge, resetChallenge, completeChallenge } = useChallenges()
+  const { resetCountdown } = useCountdown()
   
   const svg = useMemo(() => {
    switch (activeChallenge?.type) {
@@ -21,6 +23,16 @@ function ChallengeBox() {
       return ''
    }
   }, [activeChallenge])
+
+  const handleChallengeSucceeded = () => {
+    completeChallenge()
+    resetCountdown()
+  }
+
+  const handleChallengeFailed = () => {
+    resetChallenge()
+    resetCountdown()
+  } 
 
   return (
     <div className={styles.challengeBoxContainer}>
@@ -45,14 +57,15 @@ function ChallengeBox() {
           <footer>
             <button
               type='button'
+              onClick={handleChallengeFailed}
               className={styles.challengeFailedButton}
-              onClick={resetChallenge}
             >
               Falhei
             </button>
 
             <button
               type='button'
+              onClick={handleChallengeSucceeded}
               className={styles.challengeSucceededButton}
             >
               Completei
