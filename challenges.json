@@ -1,0 +1,213 @@
+[
+  {
+    "type": "body",
+    "description": "Levante-se da cadeira e estique os braços para cima, mantendo-os esticados por 15 segundos.",
+    "amount": 100
+  },
+  {
+    "type": "eye",
+    "description": "Feche os olhos e respire profundamente por 1 minuto, focando na sensação do ar entrando e saindo das narinas.",
+    "amount": 120
+  },
+  {
+    "type": "body",
+    "description": "Sente-se no chão com as pernas esticadas e incline-se para frente, alcançando os pés com as mãos e mantendo a posição por 20 segundos.",
+    "amount": 150
+  },
+  {
+    "type": "mindfulness",
+    "description": "Pratique a meditação da atenção plena por 5 minutos, focando sua atenção no momento presente e observando seus pensamentos sem julgamento.",
+    "amount": 200
+  },
+  {
+    "type": "body",
+    "description": "Faça 10 agachamentos lentos, concentrando-se em manter a forma correta e contraindo os músculos das pernas.",
+    "amount": 120
+  },
+  {
+    "type": "eye",
+    "description": "Faça um intervalo de 5 minutos para piscar os olhos várias vezes, relaxando os músculos oculares e lubrificando os olhos.",
+    "amount": 100
+  },
+  {
+    "type": "body",
+    "description": "Deite-se de costas no chão e traga os joelhos em direção ao peito, segurando-os com as mãos por 30 segundos.",
+    "amount": 180
+  },
+  {
+    "type": "mindfulness",
+    "description": "Pratique a respiração profunda por 3 minutos, inspirando profundamente pelo nariz e expirando lentamente pela boca, focando na sensação do ar em seu corpo.",
+    "amount": 150
+  },
+  {
+    "type": "body",
+    "description": "Alongue os ombros e o pescoço inclinando a cabeça para um lado e segurando por 15 segundos, depois repita para o outro lado.",
+    "amount": 100
+  },
+  {
+    "type": "eye",
+    "description": "Olhe para um ponto distante por 20 segundos, relaxando os músculos dos olhos e evitando o cansaço visual.",
+    "amount": 80
+  },
+  {
+    "type": "body",
+    "description": "Pratique a postura do guerreiro, ficando em pé com uma perna à frente e dobrando o joelho, mantendo a posição por 30 segundos de cada lado.",
+    "amount": 160
+  },
+  {
+    "type": "mindfulness",
+    "description": "Faça uma pausa de 10 minutos para caminhar ao ar livre, prestando atenção em cada passo e na sensação do ar fresco em seu rosto.",
+    "amount": 250
+  },
+  {
+    "type": "body",
+    "description": "Gire os ombros para trás em movimentos circulares por 15 segundos, aliviando a tensão muscular.",
+    "amount": 90
+  },
+  {
+    "type": "eye",
+    "description": "Faça um exercício de palming, cobrindo os olhos com as palmas das mãos por 2 minutos, relaxando os olhos e a mente.",
+    "amount": 110
+  },
+  {
+    "type": "body",
+    "description": "Sente-se ereto em uma cadeira e incline a cabeça para um lado, mantendo por 15 segundos, depois repita para o outro lado.",
+    "amount": 80
+  },
+  {
+    "type": "mindfulness",
+    "description": "Dedique 5 minutos para escrever em um diário de gratidão, refletindo sobre as coisas positivas em sua vida.",
+    "amount": 120
+  },
+  {
+    "type": "body",
+    "description": "Faça 5 flexões de braço, mantendo uma boa forma e respirando profundamente durante o movimento.",
+    "amount": 100
+  },
+  {
+    "type": "eye",
+    "description": "Faça movimentos circulares com os olhos por 1 minuto, alternando entre sentido horário e anti-horário, relaxando os músculos oculares.",
+    "amount": 130
+  },
+  {
+    "type": "body",
+    "description": "Sente-se no chão com as pernas cruzadas e incline-se para frente, mantendo as costas retas e os braços esticados, por 20 segundos.",
+    "amount": 140
+  },
+  {
+    "type": "mindfulness",
+    "description": "Pratique a escuta ativa por 10 minutos, concentrando-se completamente no que outra pessoa está dizendo sem interromper ou julgar.",
+    "amount": 180
+  },
+  {
+    "type": "body",
+    "description": "Levante-se da cadeira e dê um passeio pela sala por 5 minutos, movimentando-se e esticando as pernas.",
+    "amount": 110
+  },
+  {
+    "type": "eye",
+    "description": "Faça um exercício de foco, olhando para um objeto próximo por 30 segundos, depois mudando para um objeto distante, relaxando os olhos.",
+    "amount": 150
+  },
+  {
+    "type": "body",
+    "description": "Deite-se de barriga para baixo e levante o tronco, apoiando-se nos antebraços, mantendo a posição por 20 segundos.",
+    "amount": 170
+  },
+  {
+    "type": "mindfulness",
+    "description": "Pratique a visualização criativa por 5 minutos, imaginando-se em um lugar tranquilo e sereno, usando todos os seus sentidos para explorar o ambiente.",
+    "amount": 200
+  },
+  {
+    "type": "body",
+    "description": "Faça 10 agachamentos sumô, mantendo os pés afastados e os joelhos alinhados com os tornozelos.",
+    "amount": 120
+  },
+  {
+    "type": "eye",
+    "description": "Massageie suavemente as têmporas com os dedos por 1 minuto, aliviando a tensão e relaxando os músculos faciais.",
+    "amount": 90
+  },
+  {
+    "type": "body",
+    "description": "Sente-se em uma cadeira com os pés no chão e gire o tronco para um lado, segurando por 15 segundos, depois repita para o outro lado.",
+    "amount": 100
+  },
+  {
+    "type": "mindfulness",
+    "description": "Dedique 10 minutos para praticar a respiração consciente, concentrando-se na sensação do ar entrando e saindo do corpo.",
+    "amount": 220
+  },
+  {
+    "type": "body",
+    "description": "Faça uma série de 5 flexões de quadril, elevando uma perna para trás enquanto mantém o tronco reto.",
+    "amount": 130
+  },
+  {
+    "type": "eye",
+    "description": "Faça um exercício de foco, olhando para o dedo indicador estendido por 30 segundos, depois alternando para um objeto distante.",
+    "amount": 120
+  },
+  {
+    "type": "body",
+    "description": "Deite-se de costas e traga um joelho em direção ao peito, segurando-o com as mãos por 20 segundos, depois troque de perna.",
+    "amount": 160
+  },
+  {
+    "type": "mindfulness",
+    "description": "Faça uma caminhada consciente de 15 minutos, prestando atenção em cada passo e nas sensações em seus pés e pernas.",
+    "amount": 250
+  },
+
+  {
+    "type": "eye",
+    "description": "Faça movimentos para cima e para baixo com os olhos, olhando para o teto e depois para o chão, repetindo por 1 minuto.",
+    "amount": 100
+  },
+  {
+    "type": "eye",
+    "description": "Desenhe um oito imaginário com os olhos, movendo-os suavemente para os lados e para cima e para baixo, por 30 segundos.",
+    "amount": 110
+  },
+  {
+    "type": "eye",
+    "description": "Realize o exercício de palming, cobrindo os olhos com as mãos e aplicando uma leve pressão por 3 minutos, relaxando completamente.",
+    "amount": 130
+  },
+  {
+    "type": "eye",
+    "description": "Faça movimentos circulares com os olhos no sentido horário e anti-horário, alternando entre os dois por 1 minuto.",
+    "amount": 120
+  },
+  {
+    "type": "eye",
+    "description": "Pratique o foco próximo e distante, alternando o olhar entre um objeto próximo e outro distante por 1 minuto.",
+    "amount": 140
+  },
+  {
+    "type": "eye",
+    "description": "Pisque rapidamente por 30 segundos, lubrificando os olhos e reduzindo a fadiga visual.",
+    "amount": 90
+  },
+  {
+    "type": "eye",
+    "description": "Faça um exercício de rastreamento, movendo os olhos lentamente da esquerda para a direita e vice-versa por 1 minuto.",
+    "amount": 100
+  },
+  {
+    "type": "eye",
+    "description": "Olhe para o horizonte por 1 minuto, relaxando os olhos e permitindo que eles descansem do foco próximo.",
+    "amount": 80
+  },
+  {
+    "type": "eye",
+    "description": "Use o método 20-20-20, olhando para longe por 20 segundos a cada 20 minutos de trabalho em frente ao computador.",
+    "amount": 110
+  },
+  {
+    "type": "eye",
+    "description": "Faça uma massagem leve nos músculos ao redor dos olhos com os dedos por 2 minutos, aliviando a tensão e melhorando a circulação.",
+    "amount": 120
+  }
+]

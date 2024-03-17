@@ -1,23 +1,37 @@
 'use client'
 
-import React, { useContext } from 'react'
+import React, { useContext, useMemo } from 'react'
 
 import styles from './ChallengeBox.module.css'
 import Image from 'next/image'
+import useChallenges from '@/hooks/ChallengesContext'
 
 function ChallengeBox() {
-  const hasActiveChallenge = true
-
+  const { activeChallenge, resetChallenge } = useChallenges()
+  
+  const svg = useMemo(() => {
+   switch (activeChallenge?.type) {
+    case 'body':
+      return 'icons/body.svg'
+    case 'eye':
+      return 'icons/eye.svg'
+    case 'mindfulness':
+      return 'icons/mindfulness.svg'
+    default:
+      return ''
+   }
+  }, [activeChallenge])
 
   return (
     <div className={styles.challengeBoxContainer}>
-      {hasActiveChallenge ? (
+      {activeChallenge ? (
         <div className={styles.challengeActive}>
-          <header>Ganhe 400 xp</header>
+          <header>Ganhe {activeChallenge.amount} xp</header>
 
           <main>
             <Image
-              src="icons/body.svg"
+              priority
+              src={svg}
               alt="icon body"
               width={140}
               height={112}
@@ -25,13 +39,14 @@ function ChallengeBox() {
 
             <strong>Novo desafio</strong>
 
-            <p>Levante e faça uma caminhada de 3min</p>
+            <p>{activeChallenge.description}</p>
           </main>
 
           <footer>
             <button
               type='button'
               className={styles.challengeFailedButton}
+              onClick={resetChallenge}
             >
               Falhei
             </button>
