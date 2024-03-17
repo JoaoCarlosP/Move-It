@@ -3,6 +3,7 @@
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
 import challenges from '../../challenges.json'
 import Cookies from 'js-cookie'
+import LevelUpModal from '@/components/LevelUpModal/LevelUpModal'
 
 interface IChallenge {
   type: 'body' | 'eye' | 'mindfulness'
@@ -19,6 +20,7 @@ interface IChallengesContextProps {
   resetChallenge: () => void
   experienceToNextLevel: number
   completeChallenge: () => void
+  setIsLevelModalOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const ChallengesContext = createContext<IChallengesContextProps>({} as IChallengesContextProps)
@@ -31,16 +33,18 @@ interface IChallengesProviderProps {
 }
 
 export function ChallengesProvider ({ children, ...rest }: IChallengesProviderProps) {
-  const [level, setLevel] = useState(rest.level ?? 1)
-  const [currentExperience, setCurrenceExperience] = useState(rest.currentExperience ?? 0)
-  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0)
+  const [level, setLevel] = useState(rest?.level || 1)
+  const [currentExperience, setCurrenceExperience] = useState(rest?.currentExperience || 0)
+  const [challengesCompleted, setChallengesCompleted] = useState(rest?.challengesCompleted || 0)
 
   const [activeChallenge, setActiveChallenge] = useState<IChallenge | null>(null)
+  const [isLevelModalOpen, setIsLevelModalOpen] = useState(false)
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
 
   const levelUp = () => {
     setLevel(prev => prev + 1)
+    setIsLevelModalOpen(true)
   }
 
   const startNewChallenge = () => {
@@ -90,18 +94,23 @@ export function ChallengesProvider ({ children, ...rest }: IChallengesProviderPr
   }, [level, currentExperience, challengesCompleted])
 
   return (
-    <ChallengesContext.Provider value={{
-      level,
-      levelUp,
-      currentExperience,
-      challengesCompleted,
-      startNewChallenge,
-      activeChallenge,
-      resetChallenge,
-      experienceToNextLevel,
-      completeChallenge
-    }}>
+    <ChallengesContext.Provider
+      value={{
+        level,
+        levelUp,
+        currentExperience,
+        challengesCompleted,
+        startNewChallenge,
+        activeChallenge,
+        resetChallenge,
+        experienceToNextLevel,
+        completeChallenge,
+        setIsLevelModalOpen
+      }}
+    >
       {children}
+
+      {isLevelModalOpen && <LevelUpModal />}
     </ChallengesContext.Provider>
   )
 }
